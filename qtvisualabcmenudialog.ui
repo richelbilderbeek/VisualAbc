@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>179</width>
-    <height>176</height>
+    <width>180</width>
+    <height>325</height>
    </rect>
   </property>
   <property name="font">
@@ -22,7 +22,7 @@
    <string>Visual ABC</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="ToolVisualAbc.qrc">
+   <iconset resource="VisualAbc.qrc">
     <normaloff>:/images/R.png</normaloff>:/images/R.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -35,6 +35,19 @@
      </property>
      <property name="text">
       <string>Visual ABC</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="VisualAbc.qrc">:/images/VisualAbcMenu.png</pixmap>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -66,7 +79,7 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="ToolVisualAbc.qrc"/>
+  <include location="VisualAbc.qrc"/>
  </resources>
  <connections/>
 </ui>

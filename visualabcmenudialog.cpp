@@ -23,7 +23,6 @@ along with this program.If not, see <http://www.gnu.org/licenses/>.
 #include <cassert>
 #include <iostream>
 
-#include "richelbilderbeekprogram.h"
 #include "trace.h"
 #include "testtimer.h"
 
@@ -72,25 +71,18 @@ ribi::Help ribi::VisualAbcMenuDialog::GetHelp() const noexcept
   );
 }
 
-boost::shared_ptr<const ribi::Program> ribi::VisualAbcMenuDialog::GetProgram() const noexcept
-{
-  const boost::shared_ptr<const ribi::Program> p {
-    new ProgramVisualAbc
-  };
-  assert(p);
-  return p;
-}
 
 std::string ribi::VisualAbcMenuDialog::GetVersion() const noexcept
 {
-  return "1.1";
+  return "2.0";
 }
 
 std::vector<std::string> ribi::VisualAbcMenuDialog::GetVersionHistory() const noexcept
 {
   return {
     "2011-05-01: Version 1.0: initial version",
-    "2011-05-01: Version 1.1: added button to save ABC text"
+    "2011-05-01: Version 1.1: added button to save ABC text",
+    "2016-01-08: Version 2.0: moved to own GitHub",
   };
 }
 

@@ -28,7 +28,7 @@ void ribi::CheckPrerequisites::CheckAbc2midi()
   if (result != 0)
   {
     throw std::runtime_error(
-      "\'abc2midi\' not not present. "
+      "\'abc2midi\' not present. "
       "Type \'sudo apt-get install abcmidi\' to install");
   }
   fileio::FileIo().DeleteFile(s);
@@ -47,7 +47,7 @@ void ribi::CheckPrerequisites::CheckAbcm2ps()
   if (result != 0)
   {
     throw std::runtime_error(
-      "\'abcm2ps\' not not present. "
+      "\'abcm2ps\' not present. "
       "Type \'sudo apt-get install abcm2ps\' to install");
   }
 
@@ -68,7 +68,7 @@ void ribi::CheckPrerequisites::CheckConvert()
   {
     //FileExists("tmp.txt"))
     throw std::runtime_error(
-      "\'convert\' not not present. "
+      "\'convert\' not present. "
       "Type \'sudo apt-get install imagemagick\' to install");
   }
   fileio::FileIo().DeleteFile(s);
@@ -80,7 +80,7 @@ void ribi::CheckPrerequisites::CheckPlaysound()
   const std::string s { fileio::FileIo().GetTempFileName() };
   assert(!fileio::FileIo().IsRegularFile(s));
   const std::string cmd {
-    "playsound --version > " + s
+    "timidity --version > " + s
   };
   const int error
     = std::system(cmd.c_str());
@@ -88,8 +88,8 @@ void ribi::CheckPrerequisites::CheckPlaysound()
   {
     assert(error);
     throw std::runtime_error(
-      "\'playsound\' not not present. "
-      "Type \'sudo apt-get install libsdl-sound1.2\' to install");
+      "\'timidity\' not present. "
+      "Type \'sudo apt-get install timidity\' to install");
   }
   fileio::FileIo().DeleteFile(s);
 

@@ -2,5 +2,6 @@
     <qresource prefix="/images">
         <file>R.png</file>
         <file>SongFriday.png</file>
+        <file>VisualAbcMenu.png</file>
     </qresource>
 </RCC>

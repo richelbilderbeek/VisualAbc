@@ -119,10 +119,10 @@ void ribi::VisualAbcMainDialog::PlayMid()
 {
   //Convert ABC file to midi
   {
-    const std::string cmd = "playsound "
+    const std::string cmd = "timidity "
       + m_mid_filename;
     const int error = std::system(cmd.c_str());
-    assert(!error && "playsound not found, type 'sudo apt-get install playmidi'");
+    assert(!error && "timidity not found, type 'sudo apt-get install timidity'");
     if (error) throw std::runtime_error(cmd.c_str());
   }
 }
