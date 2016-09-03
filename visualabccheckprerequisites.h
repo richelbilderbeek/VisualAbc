@@ -8,10 +8,10 @@ struct CheckPrerequisites
   CheckPrerequisites();
 
   private:
-  void CheckAbc2midi();
-  void CheckAbcm2ps();
-  void CheckConvert();
-  void CheckPlaysound();
+  void CheckAbc2midi() const;
+  void CheckAbcm2ps() const;
+  void CheckConvert() const;
+  void CheckPlaysound() const;
 };
 
 } //~namespace ribi

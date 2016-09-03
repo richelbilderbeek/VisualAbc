@@ -6,10 +6,7 @@
 
 namespace ribi {
 
-struct Chords
-{
-  static std::vector<std::string> GetChords();
-};
+std::vector<std::string> GetChords() noexcept;
 
 } //~namespace ribi
 

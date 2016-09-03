@@ -32,7 +32,7 @@ ribi::QtVisualAbcMainDialog::QtVisualAbcMainDialog(QWidget *parent)
 
   //Set the example text
   {
-    const std::vector<std::string> v = VisualAbcMainDialog::GetAbcFriday();
+    const std::vector<std::string> v = VisualAbcMainDialog().GetAbcFriday();
     std::string t;
     for(const std::string& s: v)
     {
@@ -59,22 +59,22 @@ ribi::QtVisualAbcMainDialog::~QtVisualAbcMainDialog() noexcept
 
 void ribi::QtVisualAbcMainDialog::on_button_convert_clicked()
 {
-  VisualAbcMainDialog::ConvertToPng(ui->edit_text->toPlainText().toStdString());
-  if (ribi::fileio::FileIo().IsRegularFile(VisualAbcMainDialog::m_png_filename))
+  VisualAbcMainDialog().ConvertToPng(ui->edit_text->toPlainText().toStdString());
+  if (ribi::fileio::FileIo().IsRegularFile(VisualAbcMainDialog().m_png_filename))
   {
-    ui->label_sheet->setPixmap(QPixmap(VisualAbcMainDialog::m_png_filename.c_str()));
+    ui->label_sheet->setPixmap(QPixmap(VisualAbcMainDialog().m_png_filename.c_str()));
   }
   else
   {
-    assert(ribi::fileio::FileIo().IsRegularFile(VisualAbcMainDialog::m_pngs_filename));
-    ui->label_sheet->setPixmap(QPixmap(VisualAbcMainDialog::m_pngs_filename.c_str()));
+    assert(ribi::fileio::FileIo().IsRegularFile(VisualAbcMainDialog().m_pngs_filename));
+    ui->label_sheet->setPixmap(QPixmap(VisualAbcMainDialog().m_pngs_filename.c_str()));
   }
 }
 
 void ribi::QtVisualAbcMainDialog::on_button_play_clicked()
 {
-  VisualAbcMainDialog::ConvertToMid(ui->edit_text->toPlainText().toStdString());
-  VisualAbcMainDialog::PlayMid();
+  VisualAbcMainDialog().ConvertToMid(ui->edit_text->toPlainText().toStdString());
+  VisualAbcMainDialog().PlayMid();
 }
 
 void ribi::QtVisualAbcMainDialog::resizeEvent(QResizeEvent *)

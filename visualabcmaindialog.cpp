@@ -29,13 +29,7 @@ along with this program.If not, see <http://www.gnu.org/licenses/>.
 #include "visualabcmaindialog.h"
 #pragma GCC diagnostic pop
 
-std::string ribi::VisualAbcMainDialog::m_abc_filename = "temp.abc";
-std::string ribi::VisualAbcMainDialog::m_log_filename = "temp.log";
-std::string ribi::VisualAbcMainDialog::m_mid_filename = "temp.mid";
-std::string ribi::VisualAbcMainDialog::m_png_filename = "temp.png";
-std::string ribi::VisualAbcMainDialog::m_pngs_filename = "temp-0.png";
-
-std::vector<std::string> ribi::VisualAbcMainDialog::GetAbcFriday()
+std::vector<std::string> ribi::VisualAbcMainDialog::GetAbcFriday() const
 {
   std::vector<std::string> v;
   v.push_back("X:1");
@@ -71,7 +65,7 @@ std::vector<std::string> ribi::VisualAbcMainDialog::GetAbcFriday()
   return v;
 }
 
-void ribi::VisualAbcMainDialog::ConvertToPng(const std::string& s)
+void ribi::VisualAbcMainDialog::ConvertToPng(const std::string& s) const
 {
   //Save to file
   {
@@ -97,7 +91,7 @@ void ribi::VisualAbcMainDialog::ConvertToPng(const std::string& s)
   }
 }
 
-void ribi::VisualAbcMainDialog::ConvertToMid(const std::string& s)
+void ribi::VisualAbcMainDialog::ConvertToMid(const std::string& s) const
 {
   //Save to file
   {
@@ -115,7 +109,7 @@ void ribi::VisualAbcMainDialog::ConvertToMid(const std::string& s)
   }
 }
 
-void ribi::VisualAbcMainDialog::PlayMid()
+void ribi::VisualAbcMainDialog::PlayMid() const
 {
   //Convert ABC file to midi
   {

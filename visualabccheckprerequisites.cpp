@@ -16,7 +16,7 @@ ribi::CheckPrerequisites::CheckPrerequisites()
   CheckPlaysound();
 }
 
-void ribi::CheckPrerequisites::CheckAbc2midi()
+void ribi::CheckPrerequisites::CheckAbc2midi() const
 {
   const std::string s { fileio::FileIo().GetTempFileName() };
   assert(!fileio::FileIo().IsRegularFile(s));
@@ -35,7 +35,7 @@ void ribi::CheckPrerequisites::CheckAbc2midi()
   assert(!fileio::FileIo().IsRegularFile(s));
 }
 
-void ribi::CheckPrerequisites::CheckAbcm2ps()
+void ribi::CheckPrerequisites::CheckAbcm2ps() const
 {
   const std::string s { fileio::FileIo().GetTempFileName() };
   assert(!fileio::FileIo().IsRegularFile(s));
@@ -55,7 +55,7 @@ void ribi::CheckPrerequisites::CheckAbcm2ps()
   assert(!fileio::FileIo().IsRegularFile(s));
 }
 
-void ribi::CheckPrerequisites::CheckConvert()
+void ribi::CheckPrerequisites::CheckConvert() const
 {
   const std::string s { fileio::FileIo().GetTempFileName() };
   assert(!fileio::FileIo().IsRegularFile(s));
@@ -75,7 +75,7 @@ void ribi::CheckPrerequisites::CheckConvert()
   assert(!fileio::FileIo().IsRegularFile(s));
 }
 
-void ribi::CheckPrerequisites::CheckPlaysound()
+void ribi::CheckPrerequisites::CheckPlaysound() const
 {
   const std::string s { fileio::FileIo().GetTempFileName() };
   assert(!fileio::FileIo().IsRegularFile(s));
