@@ -23,13 +23,13 @@ addons:
 
 before_script: 
   - ./download_other_githubs.sh
+  - ./install_oclint.sh
 
 script: 
-  - ./build_console.sh
-  - ./build_desktop.sh
-  - ./VisualAbcConsole --about
+  - ./build.sh
   - ./get_code_cov.sh
   - codecov
+  - ./do_oclint.sh
 
 after_success: 
   - bash <(curl -s https://codecov.io/bash)
