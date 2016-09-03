@@ -39,6 +39,11 @@ struct VisualAbcMainDialog
   const std::string m_mid_filename{"temp.mid"};
   const std::string m_png_filename{"temp.png"};
   const std::string m_pngs_filename{"temp-0.png"};
+
+
+  private:
+  std::vector<std::string> GetAbcFridayHeader() const;
+  std::vector<std::string> GetAbcFridayMelody() const;
 };
 
 } //~namespace ribi

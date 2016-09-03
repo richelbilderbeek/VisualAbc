@@ -29,13 +29,13 @@ along with this program.If not, see <http://www.gnu.org/licenses/>.
 int ribi::VisualAbcMenuDialog::ExecuteSpecific(const std::vector<std::string>& argv) noexcept
 {
   const int argc = static_cast<int>(argv.size());
-  if (argc == 1)
+  if (argc != 1)
   {
     std::cout << GetHelp() << '\n';
-    return 1;
+    return 0;
   }
-  assert(!"TODO");
-  return 1;
+  std::cout << "VisualABC has no command-line interface\n";
+  return 0;
 }
 
 ribi::About ribi::VisualAbcMenuDialog::GetAbout() const noexcept

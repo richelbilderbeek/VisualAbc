@@ -31,6 +31,16 @@ along with this program.If not, see <http://www.gnu.org/licenses/>.
 
 std::vector<std::string> ribi::VisualAbcMainDialog::GetAbcFriday() const
 {
+  std::vector<std::string> v = GetAbcFridayHeader();
+  {
+    const std::vector<std::string> w = GetAbcFridayMelody();
+    std::copy(std::begin(w), std::end(w), std::back_inserter(v));
+  }
+  return v;
+}
+
+std::vector<std::string> ribi::VisualAbcMainDialog::GetAbcFridayHeader() const
+{
   std::vector<std::string> v;
   v.push_back("X:1");
   v.push_back("T:Friday");
@@ -47,8 +57,12 @@ std::vector<std::string> ribi::VisualAbcMainDialog::GetAbcFriday() const
   v.push_back("% E  : G# B E ");
   v.push_back("% F# : F# A# C#");
   v.push_back("% B Scale = C# D# E F# G# A# B ");
-  v.push_back("% Intro 1-8");
-  v.push_back("%");
+  return v;
+}
+
+std::vector<std::string> ribi::VisualAbcMainDialog::GetAbcFridayMelody() const
+{
+  std::vector<std::string> v;
   v.push_back("% Verse 1, 9-12");
   v.push_back("%");
   v.push_back("[V:V1] [FBd]2 d  B   | [FBd]2 d B   | [GBd]2 B d   | [GBd]2 B d    | ");

@@ -23,9 +23,6 @@ ribi::QtVisualAbcMainDialog::QtVisualAbcMainDialog(QWidget *parent)
   : QtHideAndShowDialog(parent),
     ui(new Ui::QtVisualAbcMainDialog)
 {
-  #ifndef NDEBUG
-  Test();
-  #endif
   ui->setupUi(this);
   this->setMaximumWidth(1024);
   this->setMaximumHeight(768);
@@ -99,16 +96,3 @@ void ribi::QtVisualAbcMainDialog::on_label_save_clicked()
   std::ofstream file(filename.c_str());
   file << ui->edit_text->toPlainText().toStdString();
 }
-
-
-#ifndef NDEBUG
-void ribi::QtVisualAbcMainDialog::Test() noexcept
-{
-  {
-    static bool is_tested{false};
-    if (is_tested) return;
-    is_tested = true;
-  }
-  const TestTimer test_timer(__func__,__FILE__,1.0);
-}
-#endif

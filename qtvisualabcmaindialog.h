@@ -11,7 +11,7 @@ namespace ribi {
 
 class QtVisualAbcMainDialog : public QtHideAndShowDialog
 {
-  Q_OBJECT
+  Q_OBJECT //!OCLINT
 
 public:
   explicit QtVisualAbcMainDialog(QWidget *parent = 0);
@@ -27,10 +27,6 @@ private slots:
   void on_label_save_clicked();
   void on_button_play_clicked();
   void on_button_convert_clicked();
-
-  #ifndef NDEBUG
-  static void Test() noexcept;
-  #endif
 };
 
 } //~namespace ribi
