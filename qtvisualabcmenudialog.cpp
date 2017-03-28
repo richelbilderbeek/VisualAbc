@@ -6,9 +6,7 @@
 #include "qtaboutdialog.h"
 #include "qtvisualabcmaindialog.h"
 #include "qtvisualabcmenudialog.h"
-#include "trace.h"
 #include "ui_qtvisualabcmenudialog.h"
-#include "testtimer.h"
 #include "visualabcmenudialog.h"
 #pragma GCC diagnostic pop
 

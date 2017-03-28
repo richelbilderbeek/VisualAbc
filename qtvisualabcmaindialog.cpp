@@ -13,8 +13,6 @@
 
 #include "fileio.h"
 #include "qtvisualabcmaindialog.h"
-#include "testtimer.h"
-#include "trace.h"
 #include "ui_qtvisualabcmaindialog.h"
 #include "visualabcmaindialog.h"
 #pragma GCC diagnostic pop
