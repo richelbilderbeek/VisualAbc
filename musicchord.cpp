@@ -1,5 +1,5 @@
 #pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Weffc++"
+
 #include "musicchord.h"
 #include <set>
 #include <boost/make_shared.hpp>

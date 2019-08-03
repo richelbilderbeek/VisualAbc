@@ -1,5 +1,5 @@
 #pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Weffc++"
+
 #include <QApplication>
 #include "qtvisualabcmenudialog.h"
 #include "visualabccheckprerequisites.h"
