@@ -1,9 +1,9 @@
-#pragma GCC diagnostic push
+
 
 #include "musicchord.h"
 #include <set>
 #include <boost/make_shared.hpp>
-#pragma GCC diagnostic pop
+
 
 ribi::Music::Chord::Chord(
   const Note root,

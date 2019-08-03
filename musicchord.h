@@ -4,11 +4,11 @@
 #include <string>
 #include <vector>
 
-#pragma GCC diagnostic push
+
 
 #include <boost/shared_ptr.hpp>
 #include "musicnote.h"
-#pragma GCC diagnostic pop
+
 
 namespace ribi {
 

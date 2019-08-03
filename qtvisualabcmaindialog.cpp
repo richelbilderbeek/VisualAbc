@@ -1,7 +1,7 @@
 #include <fstream>
 #include <iostream>
 
-#pragma GCC diagnostic push
+
 
 
 
@@ -15,7 +15,7 @@
 #include "qtvisualabcmaindialog.h"
 #include "ui_qtvisualabcmaindialog.h"
 #include "visualabcmaindialog.h"
-#pragma GCC diagnostic pop
+
 
 ribi::QtVisualAbcMainDialog::QtVisualAbcMainDialog(QWidget *parent)
   : QtHideAndShowDialog(parent),

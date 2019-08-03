@@ -1,4 +1,4 @@
-#pragma GCC diagnostic push
+
 
 
 
@@ -8,7 +8,7 @@
 #include "qtvisualabcmenudialog.h"
 #include "ui_qtvisualabcmenudialog.h"
 #include "visualabcmenudialog.h"
-#pragma GCC diagnostic pop
+
 
 ribi::QtVisualAbcMenuDialog::QtVisualAbcMenuDialog(QWidget *parent)
   : QtHideAndShowDialog(parent),

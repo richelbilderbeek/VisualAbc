@@ -24,10 +24,10 @@ along with this program.If not, see <http://www.gnu.org/licenses/>.
 #include <fstream>
 #include <stdexcept>
 
-#pragma GCC diagnostic push
+
 
 #include "visualabcmaindialog.h"
-#pragma GCC diagnostic pop
+
 
 std::vector<std::string> ribi::VisualAbcMainDialog::GetAbcFriday() const
 {

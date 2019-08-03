@@ -1,11 +1,11 @@
-#pragma GCC diagnostic push
+
 
 #include "musicscale.h"
 
 #include <stdexcept>
 #include "musicchord.h"
 
-#pragma GCC diagnostic pop
+
 
 ribi::Music::Scale::Scale(const Note root, const std::vector<int>& intervals)
   : m_root(root),
