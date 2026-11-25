@@ -2,7 +2,8 @@
 
 Visual ABC music notation editor.
 
-VisualAbc is one of [Richèl Bilderbeek's tools](https://richelbilderbeek.github.io/tools/).
+VisualAbc is one of [Richèl Bilderbeek's
+tools](https://richelbilderbeek.github.io/tools/).
 
 ![VisualAbc](VisualAbc_2_0.png)
 
